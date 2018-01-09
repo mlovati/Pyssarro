@@ -1,7 +1,7 @@
 __author__ = "mlovati"
 import random as rnd
 deltalimit = 0
-raw = open("C:/Users/Marco/Desktop/paintmatic/dipinto.ppm","r")
+raw = open("dipinto.ppm","r")
 raw2 = raw.read()
 lines = raw2.split("\n")
 width = int(lines[1].split(" ")[0])
@@ -52,7 +52,7 @@ def evastroke(matrix,radius,coord_x,coord_y):
     return changingarea
 
 def writer(mat_export):
-    canvas = open("C:/Users/Marco/Desktop/paintmatic/dipinto_edited.ppm","w")
+    canvas = open("dipinto_edited.ppm","w")
     canvas.write(lines[0] + "\n")
     canvas.write(lines[1] + "\n")
     canvas.write(lines[2] + "\n")

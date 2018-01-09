@@ -1,5 +1,5 @@
 def writer(mat_export):
-	canvas = open("C:/Users/Marco/Desktop/paintmatic/dipinto_magnified.ppm","w")
+	canvas = open("dipinto_magnified.ppm","w")
 	canvas.write(lines[0] + "\n")
 	canvas.write(str(width) +" "+ str(height) + "\n")
 	canvas.write(lines[2] + "\n")
@@ -23,13 +23,13 @@ def stroke(matrix,radius,coord_x,coord_y,red,green,blue):
 				matrix_c[c][b][2]=(str(blue))
 	return matrix_c
 
-raw = open("C:/Users/Marco/Desktop/paintmatic/dipinto.ppm","r")
+raw = open("dipinto.ppm","r")
 raw2 = raw.read()
 lines = raw2.split("\n")
 width = int(lines[1].split(" ")[0])
 height = int(lines[1].split(" ")[1])
 
-raw_instructions = open("C:/Users/Marco/Desktop/paintmatic/strokesjournal.dat","r")
+raw_instructions = open("strokesjournal.dat","r")
 raw_inst2 = raw_instructions.read()
 lines_inst = raw_inst2.split("\n")
 del lines_inst[-1]
